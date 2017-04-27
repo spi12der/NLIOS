@@ -14,3 +14,4 @@ print "Result", result
 sent=result[u'sentences'][0][u'parsetree']
 tree=Tree.fromstring(sent)
 tree.pretty_print()
+np = [" ".join(i.leaves()) for i in tree.subtrees() if i.label() == 'NP']
