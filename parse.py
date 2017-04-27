@@ -7,6 +7,7 @@
 # for i in range(11,20):
 # 	print i
 
+import pickle
 f=open("tuning.csv")
 
 train=[]
@@ -20,5 +21,7 @@ for line in f:
 			row.append(sent[i].lower())
 			row.append(4.6)
 			row.append('NEUTRAL')
-			train.append(row)
+			train.append(row)		
+
+pickle.dump( train, open( "myTrain.p", "wb" ) )
 
