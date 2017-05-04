@@ -15,3 +15,20 @@ sent=result[u'sentences'][0][u'parsetree']
 tree=Tree.fromstring(sent)
 tree.pretty_print()
 np = [" ".join(i.leaves()) for i in tree.subtrees() if i.label() == 'NP']
+
+
+
+
+result = loads(server.parse("display content of rohit.txt"))
+sent=result[u'sentences'][0][u'parsetree']
+tree=Tree.fromstring(sent)
+tree.pretty_print()
+
+
+
+result = loads(server.parse("create a new folder"))
+tree=Tree.fromstring(result[u'sentences'][0][u'parsetree'])
+
+for i in tree.subtrees():
+	if(i.label()=="NP"):
+		x=i

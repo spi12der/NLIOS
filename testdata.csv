@@ -1,14 +1,14 @@
-cd ,change current path to null
-touch,make a file named null
-cp,copy it to null
-mv,move file with name null from null to null
-cd ,change path to null
-mv,rename null to null
-cat,show the content of null
-mkdir,create directory named null
-mv,move null into null
-rmdir,remove the directory named null
-uncompress,compress the directory null
+cd ,change current path to noun
+touch,make a file named noun
+cp,copy it to noun
+mv,move file with name noun from noun to noun
+cd ,change path to noun
+mv,rename noun to noun
+cat,show the content of noun
+mkdir,create directory named noun
+mv,move noun into noun
+rmdir,remove the directory named noun
+uncompress,compress the directory noun
 pwd,I am in which directory
 pwd,Where am I
 Ls,List all the files
@@ -18,12 +18,12 @@ Ls,Display all the files in this folder
 mkdir,Make a new directory
 mkdir,Generate a new folder
 Rmdir,Delete this directory
-Rmdir,Remove directory null
+Rmdir,Remove directory noun
 Clear,Clear the screen
 Clear,Remove everything from screen
-man,Tell me about null
-man,I want to know about null
-man,What is null
+man,Tell me about noun
+man,I want to know about noun
+man,What is noun
 Help,Help me
 Help,I am lost
 history,past commands
@@ -42,11 +42,11 @@ id,show user information
 whatis,brief help
 whatis,short description
 whoami,display username
-cd,change directory to null
+cd,change directory to noun
 pwd,print current directory
 ls,list current files and directories
-mkdir,make directory as null
-rmdir,remove directory null
+mkdir,make directory as noun
+rmdir,remove directory noun
 touch,create file
 touch,make file
 cp,copy file

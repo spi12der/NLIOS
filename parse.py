@@ -23,5 +23,5 @@ for line in f:
 			row.append('NEUTRAL')
 			train.append(row)		
 
-pickle.dump( train, open( "myTrain.p", "wb" ) )
+pickle.dump( train, open( "myTrain2.p", "wb" ) )
 
