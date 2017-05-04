@@ -1,59 +1,59 @@
-touch,Create a new file,touch <filename>,
-cp,Copy files,cp [options] <source-filename> <destination-filename>,cp [options] <source-filepath > <destination filepath>
-mv,Move or Rename files or directories,mv [options] <old-filepath> <new-filepath>,mv [options] <old-filename> <new-filename>
-rm,Remove files,rm [options] <filname>,
-cat,View complete file content,cat <filename>,
-more,View file contents in sections determined by the size of the terminal,more <filename>,
-less,View file contents in sections determined by the size of the terminal,less [options] <filename>,
-compress,Reduces the size of the file and adds the extension,compress <filename>,
-uncompress/zcat,Restores a compressed file,uncompress <filename>,zcat <filename>
-cd,Change directory,cd <filename>,
-pwd,Print working directory on the terminal,pwd,
-ls,List the content of a directory,ls [options] or ls [options] <directory-path>,
-mkdir,Create a new directory,mkdir <directory-path>,
-rmdir,Remove a directory if its empty,rmdir <directory-path>,
-clear,Clears the terminal,,
-echo,Write a string to standard output,echo <string>,
-repeat,Repeats commands,repeat <number> <command>,
-man,Displays the manual page for the selected command,man <command-name>,
-help,Opens the default web browser in the andrew unix help web site,help,
-rtfm,Displays the man page and help files ont he terminal,rtfm <command-name>,
-history,Lists the commands typed during the session,,
-hostname,Displays the computer or server name on the terminal,,
-who,Displays who is on the system,,
-who am i,Displays the invoking user,,
-wc,Counts and displays the number of lines words and characters of a file,wc [options] <filename>,
-whatis,Displays the command description,whatis <command>,
-id,Displays the user id and the group id of the invoking user,,
-tty,Displays users terminal name,,
-passwd,Change the password,,
-df,Displays the amount of free and used disk space,,
-du,Displays the amount of disk usage,,
-quota,Displays the amount of disk space used,,
-fs quota,Checking your percentage disk usage on your andrew account,,
-fs la,lists the amount and percentage of disk usage on your andrew account,,
-fs la,lists access control lists for directories,fs la,fs la <directory-name>
-ps,Displays the active processes includes the process number process name and process time,ps,
-kill,Terminates a process,kill [options] <process-number>,
-control z,Stops a current process,,
-bg,Restarts process in the background,,
-exec,Executes a command in place of the current shell which terminates,exec <command-name>,
-lpr,Sends a job to the printer,lpr- P <printer-name> <file-name>,
-lpq,Displays the printer queue including the job number,lpq -P <printer-name>,
-lprm,Removes a job from the printer queue,lprm -P <printer-name> <job-number>,
-print,Sends the job to the printer,print -P <printer-name> <file-name>,
-env,Show all the environment variables,env,
-printenv,Show all or specified environment variable,printenv,printenv <variable-name>
-setenv,Sets a particular environment variable,setenv <variable-name> <value>,
-alias,Creates a shortcut for a command or series of commands,alias,alias <shortcut> <series of commands>
-unalias,Removes the alias from its bound commands,unalias <shortcut>,
-set,Sets variables in current shell,set <variable>=<value>,
-unset,Removes value form the variable,unset <variable>,
-stty,Set the option for a terminal,stty erase <desired-key> character erase,
-stty,whole line erase,stty kill <desired-key>,
-stty,word erase,stty werase <desired-key>,
-set filec,If file is set any partially typed filename can be expanded to its full,,
-name,whenever esc key is pressed,set filec,
-set prompt ,Sets the prompt of the terminal,set prompt=<value>,
-chsh,Change Shell,chch <username> <newshell>,
-source,Reads commands from a file used to reload an updated file into the current working shell,source <filename>,
+touch,Create a new file,touch <filename>
+cp,Copy files,cp <source-filename> <destination-filename>
+mv,Move or Rename files or directories,mv <old-filepath> <new-filepath>
+rm,Remove files,rm <filname>
+cat,View complete file content,cat <filename>
+more,View file contents in sections determined by the size of the terminal,more <filename>
+less,View file contents in sections determined by the size of the terminal,less <filename>
+compress,Reduces the size of the file and adds the extension,compress <filename>
+uncompress/zcat,Restores a compressed file,uncompress <filename>
+cd,Change directory,cd <filename>
+pwd,Print working directory on the terminal,pwd
+ls,List the content of a directory,ls <directory-path>
+mkdir,Create a new directory,mkdir <directory-path>
+rmdir,Remove a directory if its empty,rmdir <directory-path>
+clear,Clears the terminal,clear
+echo,Write a string to standard output,echo <string>
+repeat,Repeats commands,repeat <number> <command>
+man,Displays the manual page for the selected command,man <command-name>
+help,Opens the default web browser in the andrew unix help web site,help
+rtfm,Displays the man page and help files ont he terminal,rtfm <command-name>
+history,Lists the commands typed during the session,history
+hostname,Displays the computer or server name on the terminal,hostname
+who,Displays who is on the system,who
+who am i,Displays the invoking user,who am i
+wc,Counts and displays the number of lines words and characters of a file,wc <filename>
+whatis,Displays the command description,whatis <command>
+id,Displays the user id and the group id of the invoking user,id
+tty,Displays users terminal name,tty
+passwd,Change the password,passwd
+df,Displays the amount of free and used disk space,df
+du,Displays the amount of disk usage,du
+quota,Displays the amount of disk space used,quota
+fs quota,Checking your percentage disk usage on your andrew account,fs quota
+fs la,lists the amount and percentage of disk usage on your andrew account,fs la
+fs la,lists access control lists for directories,fs la
+ps,Displays the active processes includes the process number process name and process time,ps
+kill,Terminates a process,kill <process-number>
+control z,Stops a current process,control z
+bg,Restarts process in the background,bg <pid>
+exec,Executes a command in place of the current shell which terminates,exec <command-name>
+lpr,Sends a job to the printer,lpr- P <printer-name> <file-name>
+lpq,Displays the printer queue including the job number,lpq -P <printer-name>
+lprm,Removes a job from the printer queue,lprm -P <printer-name> <job-number>
+print,Sends the job to the printer,print -P <printer-name> <file-name>
+env,Show all the environment variables,env
+printenv,Show all or specified environment variable,printenv
+setenv,Sets a particular environment variable,setenv <variable-name> <value>
+alias,Creates a shortcut for a command or series of commands,alias
+unalias,Removes the alias from its bound commands,unalias <shortcut>
+set,Sets variables in current shell,set <variable>=<value>
+unset,Removes value form the variable,unset <variable>
+stty,Set the option for a terminal,stty erase <desired-key> character erase
+stty,whole line erase,stty kill <desired-key>
+stty,word erase,stty werase <desired-key>
+set filec,If file is set any partially typed filename can be expanded to its full,set filec
+name,whenever esc key is pressed,set filec
+set prompt ,Sets the prompt of the terminal,set prompt=<value>
+chsh,Change Shell,chch <username> <newshell>
+source,Reads commands from a file used to reload an updated file into the current working shell,source <filename>
