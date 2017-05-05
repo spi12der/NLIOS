@@ -1,0 +1,42 @@
+Loading Models: 0/5                                                            Traceback (most recent call last):
+  File "corenlp.py", line 257, in <module>
+    nlp = StanfordCoreNLP()
+  File "corenlp.py", line 168, in __init__
+    self.corenlp.expect("done.", timeout=20) # Load pos tagger model (~5sec)
+  File "/usr/local/lib/python2.7/dist-packages/pexpect/spawnbase.py", line 321, in expect
+    timeout, searchwindowsize, async)
+  File "/usr/local/lib/python2.7/dist-packages/pexpect/spawnbase.py", line 345, in expect_list
+    return exp.expERROR:__main__:Error: Timeout with input 'create folder rohit inside downloads
+'
+ERROR:__main__:Error: Timeout with input 'create folder rohit inside downloads
+'
+ERROR:__main__:Error: Timeout with input 'create folder rohit inside downloads
+'
+ERROR:__main__:Error: Timeout with input 'create folder rohit inside downloads
+'
+0x7f9f3561cdd0>
+command: /usr/bin/java
+args: ['/usr/bin/java', '-Xmx1800m', '-cp', './stanford-corenlp-full-2014-08-27/stanford-corenlp-3.4.1.jar:./stanford-corenlp-full-2014-08-27/stanford-corenlp-3.4.1-models.jar:./stanford-corenlp-full-2014-08-27/joda-time.jar:./stanford-corenlp-full-2014-08-27/xom.jar:./stanford-corenlp-full-2014-08-27/jollyday.jar', 'edu.stanford.nlp.pipeline.StanfordCoreNLP', '-props', 'default.properties']
+buffer (last 100 chars): 'el from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... '
+before (last 100 chars): 'el from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... '
+after: <class 'pexpect.exceptions.TIMEOUT'>
+match: None
+match_index: None
+exitstatus: None
+flag_eof: False
+pid: 28326
+child_fd: 5
+closed: False
+timeout: 30
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile("done.")
