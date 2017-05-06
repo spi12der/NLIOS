@@ -4,6 +4,9 @@ from simplejson import loads
 import subprocess as sp
 from lstm import *
 
+#Connecting to nltk server
+server = jsonrpc.ServerProxy(jsonrpc.JsonRpc20(),jsonrpc.TransportTcpIp(addr=("0.0.0.0", 3456)))
+
 #Function to get noun list
 def getNoun(noun):
 	nlist=[]
@@ -15,13 +18,11 @@ def getNoun(noun):
 
 
 def init(cmdDict,cmd):
-	#Connecting to nltk server
-	server = jsonrpc.ServerProxy(jsonrpc.JsonRpc20(),jsonrpc.TransportTcpIp(addr=("0.0.0.0", 3456)))
 	#Training the new model
 	sls=lstm("bestsem.p",load=True,training=True)
 	print "Pre training "
-	train=pickle.load(open("myTrain2.p",'rb'))
-	sls.train_lstm(train,75)
+	train=pickle.load(open("myTrain3.p",'rb'))
+	sls.train_lstm(train,75)	
 	#Loading the command dictionary
 	f=open("commands.csv")
 	line=f.read().splitlines()
@@ -32,7 +33,7 @@ def init(cmdDict,cmd):
 	    details.append(c[2].lower())
 	    details.append(c[3].lower())
 	    cmd[c[0].lower()]=details
-	tmp = sp.call('clear',shell=True)
+	#tmp = sp.call('clear',shell=True)
 	print "Model trained"
 	return sls	
 
@@ -72,22 +73,26 @@ def handleQuery(user_input,cmdDict,cmd,sls):
 		else:
 			qwords.append("noun")
 	query=""
+	rules={}
 	for x in qwords:
 		query=query+" "+x
 	query=query.strip() 
 	for key in cmdDict.keys():
-        n=sls.predict_similarity(query,key)*4.0+1.0
-        rules[str(n)]=key
-    dis=sorted(rules.iterkeys(),reverse=True)		
-    if(dis[0]<4.0):
-    	return "ERROR:Unable to generate command"
-    details=cmd[cmdDict[dis[0]]]
-    cmdString=details[0]
-    cmdType=details[1]
-    if(cmdType==1):
-    	return cmdGenerateTypeOne(user_input,cmdString)
-    elif(cmdType==0):
-    	return cmdString
+		n=sls.predict_similarity(query,key)*4.0+1.0
+		rules[str(n)]=key
+	dis=sorted(rules.iterkeys(),reverse=True)		
+	# if(dis[0][2:-2]<4.0):
+	# 	return "ERROR:Unable to generate command"
+	details=cmd[cmdDict[rules[dis[0]]]]
+	cmdString=details[0]
+	cmdType=details[1]
+	x=""
+	if(cmdType=='1'):
+		print "Type 1 command"
+		x=cmdGenerateTypeOne(user_input,cmdString)
+	elif(cmdType==0):
+		x=cmdString
+	return x
     	
 
 cmdDict={}
